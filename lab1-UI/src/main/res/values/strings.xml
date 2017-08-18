@@ -6,4 +6,5 @@
     <string name="log_in">Ingresar</string>
     <string name="sign_up">Registrarse</string>
     <string name="link_login"><a href="sites.google.com/view/jaiberyepes">¿Olvidaste tu contraseña?</a></string>
+    <string name="sign_up2">Registro de usuario</string>
 </resources>

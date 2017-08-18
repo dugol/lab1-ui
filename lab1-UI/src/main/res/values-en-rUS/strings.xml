@@ -7,4 +7,5 @@
     <string name="log_in">Log in</string>
     <string name="sign_up">Sign up</string>
     <string name="link_login"><a href="sites.google.com/view/jaiberyepes">forgot password?</a></string>
+    <string name="sign_up2">Sign up</string>
 </resources>
