@@ -12,42 +12,54 @@
         android:textSize="35dp"
         android:textStyle="bold"
         android:gravity="center"
+        android:layout_marginTop="15dp"
         android:layout_gravity="center"/>
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:layout_margin="18dp"
+        android:layout_marginTop="18dp"
         android:textStyle="normal"/>
 
     <EditText
         android:id="@+id/editText3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="18dp"
         android:hint="@string/password"
         android:inputType="numberPassword"
-        android:layout_margin="18dp"
         android:textStyle="normal"/>
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_marginLeft="18dp"
+        android:text="@string/link_login"
+        android:autoLink="web"
+        android:linksClickable="true"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:text="@string/log_in" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/sign_up"/>
+
 
 </LinearLayout>

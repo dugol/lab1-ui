@@ -4,4 +4,7 @@
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="link_login"><a href="sites.google.com/view/jaiberyepes">forgot password?</a></string>
 </resources>

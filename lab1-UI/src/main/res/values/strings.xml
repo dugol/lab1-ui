@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LabsCM20172</string>
+    <string name="login">Inicio de sesión</string>
+    <string name="email">Correo</string>
+    <string name="password">Contraseña</string>
+    <string name="log_in">Ingresar</string>
+    <string name="sign_up">Registrarse</string>
+    <string name="link_login"><a href="sites.google.com/view/jaiberyepes">¿Olvidaste tu contraseña?</a></string>
+</resources>
