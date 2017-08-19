@@ -6,5 +6,31 @@
     <string name="log_in">Ingresar</string>
     <string name="sign_up">Registrarse</string>
     <string name="link_login"><a href="sites.google.com/view/jaiberyepes">¿Olvidaste tu contraseña?</a></string>
-    <string name="sign_up2">Registro de usuario</string>
+    <string name="sign_up_register">Registro de usuario</string>
+    <string name="first_name">Nombre</string>
+    <string name="last_name">Apellido</string>
+    <string name="male">Hombre</string>
+    <string name="female">Mujer</string>
+    <string name="birthday">Fecha de nacimiento</string>
+    <string name="phone">Teléfono</string>
+    <string name="address">Dirección</string>
+    <string name="city">Ciudad</string>
+    <string name="send">Enviar</string>
+    <string-array name="cities">
+        <item>Barranquilla</item>
+        <item>Bogotá</item>
+        <item>Bucaramanga</item>
+        <item>Buenaventura</item>
+        <item>Cartagena de Índias</item>
+        <item>Cali</item>
+        <item>Cúcuta</item>
+        <item>Ibagué</item>
+        <item>Manizales</item>
+        <item>Medellín</item>
+        <item>Montería</item>
+        <item>Neiva</item>
+        <item>Pasto</item>
+        <item>Pereira</item>
+        <item>Valledupar</item>
+    </string-array>
 </resources>

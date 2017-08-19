@@ -7,5 +7,31 @@
     <string name="log_in">Log in</string>
     <string name="sign_up">Sign up</string>
     <string name="link_login"><a href="sites.google.com/view/jaiberyepes">forgot password?</a></string>
-    <string name="sign_up2">Sign up</string>
+    <string name="sign_up_register">Sign up</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="male">Man</string>
+    <string name="female">Woman</string>
+    <string name="birthday">Birthday</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="city">Ciudad</string>
+    <string name="send">Send</string>
+    <string-array name="cities">
+        <item>Barranquilla</item>
+        <item>Bogotá</item>
+        <item>Bucaramanga</item>
+        <item>Buenaventura</item>
+        <item>Cartagena de Índias</item>
+        <item>Cali</item>
+        <item>Cúcuta</item>
+        <item>Ibagué</item>
+        <item>Manizales</item>
+        <item>Medellín</item>
+        <item>Montería</item>
+        <item>Neiva</item>
+        <item>Pasto</item>
+        <item>Pereira</item>
+        <item>Valledupar</item>
+</string-array>
 </resources>
