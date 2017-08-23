@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBlack">#212121</color>
+    <color name="SummerSky">#3CA7F0 </color>
+    <color name="MayaBlue">#58C7FC </color>
+    <color name="Mercury">#D9D6D5</color>
+    <color name="White">#fafafa</color>
+    <color name="HawkesBlue">#C7DCF4</color>
 </resources>

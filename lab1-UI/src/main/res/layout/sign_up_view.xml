@@ -28,15 +28,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        app:srcCompat="@mipmap/ic_launcher"
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        android:tint="@color/MayaBlue"
         android:layout_below="@+id/title"
         android:layout_marginLeft="25dp"  />
 
-    <Button
+    <ImageButton
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:textColor="@color/White"
+        android:backgroundTint="@color/SummerSky"
         android:layout_above="@+id/first_name"
         android:layout_alignRight="@+id/genderRadio"
         android:layout_alignEnd="@+id/genderRadio" />
@@ -167,6 +171,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/send"
+        android:textColor="@color/White"
+        android:backgroundTint="@color/SummerSky"
         android:layout_marginTop="23dp"
         android:layout_below="@id/city"
         android:layout_centerHorizontal="true" />
