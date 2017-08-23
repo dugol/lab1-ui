@@ -33,4 +33,12 @@
         <item>Pereira</item>
         <item>Valledupar</item>
     </string-array>
+    <string name="ted_permission">Si rechaza el permiso, no podrá acceder a este servicio. Por favor active el permiso</string>
+    <string name="update">Actualizar perfil</string>
+    <string name="exit">Salir</string>
+
+    <string name="title_activity_apartment">ApartmentActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
 </resources>
