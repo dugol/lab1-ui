@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="co.edu.udea.compumovil.gr02_20172.lab1.UpdateProfileAcitivy">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp" />
+
+    <ImageView
+        android:id="@+id/photo_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        android:tint="@color/MayaBlue"
+        android:layout_below="@+id/title_update"
+        android:layout_marginLeft="25dp"  />
+
+    <ImageButton
+        android:id="@+id/button_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:textColor="@color/White"
+        android:backgroundTint="@color/SummerSky"
+        android:layout_above="@+id/first_name_update"
+        android:layout_alignRight="@+id/genderRadio_update"
+        android:layout_alignEnd="@+id/genderRadio_update" />
+
+    <EditText
+        android:id="@+id/last_name_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textCapWords|textNoSuggestions"
+        android:hint="@string/last_name"
+        tools:ignore="RtlHardcoded"
+        android:layout_alignBaseline="@+id/first_name_update"
+        android:layout_alignBottom="@+id/first_name_update"
+        android:layout_toRightOf="@+id/send"
+        android:layout_toEndOf="@+id/send" />
+
+    <EditText
+        android:id="@+id/first_name_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="textCapWords|textNoSuggestions"
+        android:hint="@string/first_name"
+        android:layout_below="@+id/photo_update"
+        android:layout_marginLeft="25dp"
+        android:layout_toLeftOf="@+id/send"
+        android:layout_toStartOf="@+id/send" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/last_name_update"
+        android:orientation="horizontal"
+        android:id="@+id/genderRadio_update">
+
+        <RadioButton
+            android:id="@+id/radio_men"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male"
+            android:onClick="rbclick"/>
+
+        <RadioButton
+            android:id="@+id/radio_women"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female"
+            android:onClick="rbclick"/>
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/birthday_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/birthday"
+        android:editable="false"
+        android:focusable="false"
+        android:textSize="18dp"
+        android:onClick="onClick"
+        android:textColor="@color/colorBlack"
+        android:layout_alignTop="@+id/genderRadio_update"
+        android:layout_alignLeft="@+id/last_name_update"
+        android:layout_alignStart="@+id/last_name_update"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <!-- <DatePicker
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"></DatePicker>-->
+
+    <EditText
+        android:id="@+id/phone_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="@string/phone"
+        android:layout_below="@+id/birthday_update"
+        android:layout_marginLeft="25dp"
+        android:layout_alignRight="@+id/first_name_update"
+        android:layout_alignEnd="@+id/first_name_update" />
+
+    <EditText
+        android:id="@+id/address_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textNoSuggestions"
+        android:hint="@string/address"
+        android:layout_alignBaseline="@+id/phone_update"
+        android:layout_alignBottom="@+id/phone_update"
+        android:layout_alignLeft="@+id/birthday_update"
+        android:layout_alignStart="@+id/birthday_update" />
+
+    <EditText
+        android:id="@+id/email_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"
+        android:layout_below="@+id/phone_update"
+        android:layout_alignLeft="@+id/phone_update"
+        android:layout_alignStart="@+id/phone_update"
+        android:layout_alignRight="@+id/phone_update"
+        android:layout_alignEnd="@+id/phone_update" />
+
+    <EditText
+        android:id="@+id/password_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/password"
+        android:layout_below="@+id/email_update"
+        android:layout_alignBaseline="@+id/email_update"
+        android:layout_alignBottom="@+id/email_update"
+        android:layout_alignLeft="@+id/address_update"
+        android:layout_alignStart="@+id/address_update"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/city_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_update"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:hint="@string/city"
+        android:inputType="textAutoComplete"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="120dp"/>
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send"
+        android:textColor="@color/White"
+        android:backgroundTint="@color/SummerSky"
+        android:layout_marginTop="23dp"
+        android:layout_below="@id/city_update"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
+</ScrollView>
