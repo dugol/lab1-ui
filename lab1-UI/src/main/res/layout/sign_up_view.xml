@@ -91,16 +91,22 @@
 
     </RadioGroup>
 
-    <TextView
+    <EditText
         android:id="@+id/birthday"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/birthday"
+        android:hint="@string/birthday"
         android:layout_marginTop="30dp"
         android:textSize="18dp"
+        android:focusable="false"
+        android:editable="false"
         android:textColor="@color/colorBlack"
         android:layout_below="@+id/genderRadio"
-        android:layout_marginLeft="25dp"/>
+        android:onClick="onClick"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="120dp"/>
+
+
 
    <!-- <DatePicker
         android:layout_width="wrap_content"

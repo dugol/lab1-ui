@@ -4,10 +4,12 @@ import android.Manifest;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.gun0912.tedpermission.PermissionListener;
@@ -25,7 +27,7 @@ import static co.edu.udea.compumovil.gr02_20172.lab1.R.array.cities;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
     private AutoCompleteTextView cityAutoComplete;
-    private
+    private EditText mEditInit;
     int year_x, month_x, day_x;
     static final int DILOG_ID=0;
 
@@ -65,10 +67,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         tedBottomPicker.show(getSupportFragmentManager());*/
     }
 
-    public void showDialog()
-    {
 
-    }
 
     @Override
     public void onClick(View view) {
@@ -77,6 +76,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 Intent toMainActivity = new Intent(getApplicationContext(),SignUpActivity.class);
                 startActivity(toMainActivity);
                 break;
+
+            case R.id.birthday:
+                DialogFragment newFragment = new DatePickerFragment(view);
+                newFragment.show(getSupportFragmentManager(), "datePicker");
         }
     }
 }
