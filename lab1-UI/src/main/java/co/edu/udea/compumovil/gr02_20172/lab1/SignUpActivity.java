@@ -87,7 +87,7 @@ public class SignUpActivity extends AppCompatActivity{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.send:
-                if(firstNameSign.getText().equals(null) || lastNameSign.getText().equals(null) || birthdaySign.getText().equals(null) || phoneSign.getText().equals(null) || addressSign.getText().equals(null) || emailSign.getText().equals(null) || citySign.getText().equals(null) || genderSignOp.getText().equals(null))
+                if(firstNameSign.getText().toString().equals("") || lastNameSign.getText().toString().equals("") || birthdaySign.getText().toString().equals("") || phoneSign.getText().toString().equals("") || addressSign.getText().toString().equals("") || emailSign.getText().toString().equals("") || citySign.getText().toString().equals("") || genderSignOp.getText().toString().equals(""))
                 {
                     Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.warning2), Toast.LENGTH_SHORT);
                     toast.show();
