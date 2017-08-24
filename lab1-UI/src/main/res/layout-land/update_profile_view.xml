@@ -51,6 +51,7 @@
         android:inputType="textCapWords|textNoSuggestions"
         android:hint="@string/last_name"
         tools:ignore="RtlHardcoded"
+        android:layout_marginRight="23dp"
         android:layout_alignBaseline="@+id/first_name_update"
         android:layout_alignBottom="@+id/first_name_update"
         android:layout_toRightOf="@+id/send"
@@ -103,12 +104,14 @@
         android:focusable="false"
         android:textSize="18dp"
         android:onClick="onClick"
+        android:layout_marginRight="23dp"
         android:textColor="@color/colorBlack"
-        android:layout_alignTop="@+id/genderRadio_update"
-        android:layout_alignLeft="@+id/last_name_update"
-        android:layout_alignStart="@+id/last_name_update"
+        android:layout_below="@+id/genderRadio_update"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="38dp"
+        android:layout_alignLeft="@+id/last_name_update"
+        android:layout_alignStart="@+id/last_name_update" />
 
     <!-- <DatePicker
          android:layout_width="wrap_content"
@@ -118,12 +121,13 @@
         android:id="@+id/phone_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
         android:ems="10"
         android:inputType="phone"
         android:hint="@string/phone"
-        android:layout_below="@+id/birthday_update"
-        android:layout_marginLeft="25dp"
+        android:layout_alignBaseline="@+id/birthday_update"
+        android:layout_alignBottom="@+id/birthday_update"
+        android:layout_alignLeft="@+id/genderRadio_update"
+        android:layout_alignStart="@+id/genderRadio_update"
         android:layout_alignRight="@+id/first_name_update"
         android:layout_alignEnd="@+id/first_name_update" />
 
@@ -134,8 +138,11 @@
         android:ems="10"
         android:inputType="textNoSuggestions"
         android:hint="@string/address"
-        android:layout_alignBaseline="@+id/phone_update"
-        android:layout_alignBottom="@+id/phone_update"
+        android:layout_marginRight="23dp"
+        android:layout_alignBaseline="@+id/email_update"
+        android:layout_alignBottom="@+id/email_update"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignLeft="@+id/birthday_update"
         android:layout_alignStart="@+id/birthday_update" />
 
@@ -157,28 +164,31 @@
         android:id="@+id/password_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPassword"
         android:hint="@string/password"
+        android:layout_marginRight="23dp"
         android:layout_below="@+id/email_update"
-        android:layout_alignBaseline="@+id/email_update"
-        android:layout_alignBottom="@+id/email_update"
-        android:layout_alignLeft="@+id/address_update"
-        android:layout_alignStart="@+id/address_update"/>
+        android:layout_alignLeft="@+id/email_update"
+        android:layout_alignStart="@+id/email_update"
+        android:layout_alignRight="@+id/email_update"
+        android:layout_alignEnd="@+id/email_update" />
 
     <AutoCompleteTextView
         android:id="@+id/city_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password_update"
-        android:layout_marginTop="23dp"
         android:ems="10"
         android:hint="@string/city"
         android:inputType="textAutoComplete"
-        android:layout_marginLeft="25dp"
-        android:layout_toLeftOf="@+id/send"
-        android:layout_toStartOf="@+id/send" />
+        android:layout_marginRight="23dp"
+        android:layout_alignBaseline="@+id/password_update"
+        android:layout_alignBottom="@+id/password_update"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/send"
+        android:layout_toEndOf="@+id/send" />
 
     <Button
         android:id="@+id/send"

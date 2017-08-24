@@ -52,6 +52,7 @@
         android:ems="10"
         android:inputType="textCapWords|textNoSuggestions"
         android:hint="@string/last_name"
+        android:layout_marginLeft="23dp"
         android:layout_alignBaseline="@+id/first_name"
         android:layout_alignBottom="@+id/first_name"
         android:layout_alignLeft="@+id/phone"
@@ -68,7 +69,7 @@
         android:inputType="textCapWords|textNoSuggestions"
         android:hint="@string/first_name"
         android:layout_below="@+id/photo"
-        android:layout_marginLeft="25dp"
+        android:layout_marginLeft="23dp"
         android:layout_toLeftOf="@+id/send"
         android:layout_toStartOf="@+id/send" />
 
@@ -112,11 +113,6 @@
         android:layout_alignRight="@+id/first_name"
         android:layout_alignEnd="@+id/first_name" />
 
-
-
-   <!-- <DatePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></DatePicker>-->
 
     <EditText
         android:id="@+id/phone"
@@ -166,7 +162,7 @@
         android:inputType="textPassword"
         android:hint="@string/password"
         android:layout_below="@+id/email"
-        android:layout_marginLeft="25dp"
+        android:layout_marginLeft="23dp"
         android:layout_alignRight="@+id/address"
         android:layout_alignEnd="@+id/address" />
 
