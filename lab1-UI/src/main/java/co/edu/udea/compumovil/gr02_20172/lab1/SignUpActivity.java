@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -28,7 +29,7 @@ import static co.edu.udea.compumovil.gr02_20172.lab1.R.array.cities;
  */
 
 public class SignUpActivity extends AppCompatActivity{
-    private EditText firstNameSign, lastNameSign, birthdaySign, phoneSign, addressSign, emailSign;
+    private EditText firstNameSign, lastNameSign, birthdaySign, phoneSign, addressSign, emailSign, passwordSign;
     private RadioGroup genderSign;
     private RadioButton genderSignOp;
     private AutoCompleteTextView citySign;
@@ -44,6 +45,7 @@ public class SignUpActivity extends AppCompatActivity{
         phoneSign = (EditText)findViewById(R.id.phone);
         addressSign = (EditText)findViewById(R.id.address);
         emailSign = (EditText)findViewById(R.id.email);
+        passwordSign = (EditText)findViewById(R.id.password);
         ArrayAdapter<String> citiesArray = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.cities));
         citySign = (AutoCompleteTextView)findViewById(R.id.city);
         citySign.setAdapter(citiesArray);
@@ -93,16 +95,17 @@ public class SignUpActivity extends AppCompatActivity{
                     toast2.show();
                 }
                 else {
-                    Intent toProfile = new Intent(getApplicationContext(), ProfileActivity.class);
-                    toProfile.putExtra("KEY_FIRST_NAME", firstNameSign.getText().toString());
-                    toProfile.putExtra("KEY_LAST_NAME", lastNameSign.getText().toString());
-                    toProfile.putExtra("KEY_GENDER", genderSignOp.getText().toString());
-                    toProfile.putExtra("KEY_BIRTHDAY", birthdaySign.getText().toString());
-                    toProfile.putExtra("KEY_PHONE", phoneSign.getText().toString());
-                    toProfile.putExtra("KEY_ADDRESS", addressSign.getText().toString());
-                    toProfile.putExtra("KEY_EMAIL", emailSign.getText().toString());
-                    toProfile.putExtra("KEY_CITY", citySign.getText().toString());
-                    startActivity(toProfile);
+                    Intent toApartment = new Intent(getApplicationContext(), ApartmentActivity.class);
+                    toApartment.putExtra("KEY_FIRST_NAME", firstNameSign.getText().toString());
+                    toApartment.putExtra("KEY_LAST_NAME", lastNameSign.getText().toString());
+                    toApartment.putExtra("KEY_GENDER", genderSignOp.getText().toString());
+                    toApartment.putExtra("KEY_BIRTHDAY", birthdaySign.getText().toString());
+                    toApartment.putExtra("KEY_PHONE", phoneSign.getText().toString());
+                    toApartment.putExtra("KEY_ADDRESS", addressSign.getText().toString());
+                    toApartment.putExtra("KEY_EMAIL", emailSign.getText().toString());
+                    toApartment.putExtra("KEY_PASSWORD",passwordSign.getText());
+                    toApartment.putExtra("KEY_CITY", citySign.getText().toString());
+                    startActivity(toApartment);
                 }
                 break;
 

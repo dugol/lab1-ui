@@ -32,6 +32,13 @@ public class UpdateProfileAcitivy extends AppCompatActivity{
         cityUpdate = (AutoCompleteTextView)findViewById(R.id.city_update);
         cityUpdate.setAdapter(citiesArray);
         genderUpdate = (RadioGroup)findViewById(R.id.genderRadio_update);
+        firstNameUpdate.setText(getIntent().getStringExtra("KEY_FIRST_NAME"));
+        lastNameUpdate.setText(getIntent().getStringExtra("KEY_LAST_NAME"));
+        birthdayUpdate.setText(getIntent().getStringExtra("KEY_BIRTHDAY"));
+        phoneUpdate.setText(getIntent().getStringExtra("KEY_PHONE"));
+        addressUpdate.setText(getIntent().getStringExtra("KEY_ADDRESS"));
+        emailUpdate.setText(getIntent().getStringExtra("KEY_EMAIL"));
+        cityUpdate.setText(getIntent().getStringExtra("KEY_CITY"));
     }
 
     public void rbclick(View v)

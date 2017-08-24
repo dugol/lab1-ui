@@ -109,11 +109,6 @@
         android:layout_marginRight="120dp"/>
 
 
-
-   <!-- <DatePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></DatePicker>-->
-
     <EditText
         android:id="@+id/phone"
         android:layout_width="match_parent"

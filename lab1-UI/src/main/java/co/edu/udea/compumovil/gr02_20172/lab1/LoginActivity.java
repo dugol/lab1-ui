@@ -33,17 +33,18 @@ public class LoginActivity extends AppCompatActivity{
                 break;
             case R.id.log_in:
                 if(emailText.getText().toString().equals("admin") && passwordText.getText().toString().equals("admin")) {
-                    Log.d("TAG",emailText.getText().toString());
-                    Intent toProfile= new Intent(getApplicationContext(), ProfileActivity.class);
-                    toProfile.putExtra("KEY_FIRST_NAME","Pepito Andrés");
-                    toProfile.putExtra("KEY_LAST_NAME","Pérez Samaria");
-                    toProfile.putExtra("KEY_GENDER","Hombre");
-                    toProfile.putExtra("KEY_BIRTHDAY","21/07/1993");
-                    toProfile.putExtra("KEY_PHONE","3148514700");
-                    toProfile.putExtra("KEY_ADDRESS","Crra falsa 123");
-                    toProfile.putExtra("KEY_EMAIL","admin");
-                    toProfile.putExtra("KEY_CITY","Medellín");
-                    startActivity(toProfile);
+                    Intent toApartment= new Intent(getApplicationContext(), ApartmentActivity.class);
+                    toApartment.putExtra("KEY_FIRST_NAME","Pepito Andrés");
+                    toApartment.putExtra("KEY_LAST_NAME","Pérez Samaria");
+                    toApartment.putExtra("KEY_GENDER","Hombre");
+                    toApartment.putExtra("KEY_GENDER_ID",1);
+                    toApartment.putExtra("KEY_BIRTHDAY","21/07/1993");
+                    toApartment.putExtra("KEY_PHONE","3148514700");
+                    toApartment.putExtra("KEY_ADDRESS","Crra falsa 123");
+                    toApartment.putExtra("KEY_EMAIL","admin");
+                    toApartment.putExtra("KEY_PASSWORD","admin");
+                    toApartment.putExtra("KEY_CITY","Medellín");
+                    startActivity(toApartment);
                 }
                 else
                 {

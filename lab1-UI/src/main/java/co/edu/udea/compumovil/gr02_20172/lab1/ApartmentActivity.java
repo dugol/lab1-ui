@@ -16,6 +16,7 @@ import android.view.MenuItem;
 
 public class ApartmentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private String firstNameApt,lastNameApt,genderApt, birthdayApt, phoneApt, addressApt, emailApt, passwordApt,cityApt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +25,22 @@ public class ApartmentActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        firstNameApt = getIntent().getStringExtra("KEY_FIRST_NAME");
+        lastNameApt = getIntent().getStringExtra("KEY_LAST_NAME");
+        genderApt = getIntent().getStringExtra("KEY_GENDER");
+        birthdayApt = getIntent().getStringExtra("KEY_BIRTHDAY");
+        phoneApt = getIntent().getStringExtra("KEY_PHONE");
+        addressApt = getIntent().getStringExtra("KEY_ADDRESS");
+        emailApt = getIntent().getStringExtra("KEY_EMAIL");
+        passwordApt = getIntent().getStringExtra("KEY_PASSWORD");
+        cityApt = getIntent().getStringExtra("KEY_CITY");
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Próximamente apartamentos", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -83,12 +95,31 @@ public class ApartmentActivity extends AppCompatActivity
 
         if (id == R.id.profile_item) {
             Intent toProfile = new Intent(getApplicationContext(),ProfileActivity.class);
+            toProfile.putExtra("KEY_FIRST_NAME",firstNameApt);
+            toProfile.putExtra("KEY_LAST_NAME",lastNameApt);
+            toProfile.putExtra("KEY_GENDER",genderApt);
+            toProfile.putExtra("KEY_BIRTHDAY",birthdayApt);
+            toProfile.putExtra("KEY_PHONE",phoneApt);
+            toProfile.putExtra("KEY_ADDRESS",addressApt);
+            toProfile.putExtra("KEY_EMAIL",emailApt);
+            toProfile.putExtra("KEY_CITY",cityApt);
             startActivity(toProfile);
         } else if (id == R.id.update_item) {
-
+            Intent toUpdate = new Intent(getApplicationContext(),UpdateProfileAcitivy.class);
+            toUpdate.putExtra("KEY_FIRST_NAME",firstNameApt);
+            toUpdate.putExtra("KEY_LAST_NAME",lastNameApt);
+            toUpdate.putExtra("KEY_GENDER",genderApt);
+            toUpdate.putExtra("KEY_BIRTHDAY",birthdayApt);
+            toUpdate.putExtra("KEY_PHONE",phoneApt);
+            toUpdate.putExtra("KEY_ADDRESS",addressApt);
+            toUpdate.putExtra("KEY_EMAIL",emailApt);
+            toUpdate.putExtra("KEY_PASSWORD",passwordApt);
+            toUpdate.putExtra("KEY_CITY",cityApt);
+            startActivity(toUpdate);
         }
         else if (id == R.id.exit_item){
-
+            Intent toLogin = new Intent(getApplicationContext(),LoginActivity.class);
+            startActivity(toLogin);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.menu_drawer_layout);
