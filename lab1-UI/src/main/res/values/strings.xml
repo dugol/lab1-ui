@@ -11,7 +11,7 @@
     <string name="last_name">Apellido</string>
     <string name="male">Hombre</string>
     <string name="female">Mujer</string>
-    <string name="birthday">Fecha de nacimiento</string>
+    <string name="birthday">Nacimiento</string>
     <string name="phone">Teléfono</string>
     <string name="address">Dirección</string>
     <string name="city">Ciudad</string>
@@ -39,7 +39,7 @@
     <string name="warning">Los datos ingresados son incorrectos</string>
     <string name="my_profile">Mi perfil</string>
     <string name="gender">Género</string>
-    <string name="warning2">No puede dejar información vacía</string>
+    <string name="warning2">Faltan datos por llenar</string>
 
 
     <string name="title_activity_apartment">ApartmentActivity</string>

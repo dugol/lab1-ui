@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity{
                 break;
             case R.id.log_in:
                 if(emailText.getText().toString().equals("admin") && passwordText.getText().toString().equals("admin")) {
+                    Log.d("TAG",emailText.getText().toString());
                     Intent toProfile= new Intent(getApplicationContext(), ProfileActivity.class);
                     toProfile.putExtra("KEY_FIRST_NAME","Pepito Andrés");
                     toProfile.putExtra("KEY_LAST_NAME","Pérez Samaria");

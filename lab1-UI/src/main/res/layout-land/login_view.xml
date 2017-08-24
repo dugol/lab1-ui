@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.edu.udea.compumovil.gr02_20172.lab1.LoginActivity">
+
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorBlack"
+        android:layout_gravity="center" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="18dp"
+        android:textStyle="normal"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="18dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textStyle="normal"/>
+
+    <TextView
+        android:id="@+id/link_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:text="@string/link_login"
+        android:autoLink="web"
+        android:linksClickable="true"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/log_in"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/White"
+        android:backgroundTint="@color/SummerSky"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:text="@string/log_in"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/sign_up"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/White"
+        android:backgroundTint="@color/SummerSky"
+        android:layout_gravity="center"
+        android:text="@string/sign_up"
+        android:onClick="onClick"/>
+
+
+</LinearLayout>

@@ -32,9 +32,7 @@ public class SignUpActivity extends AppCompatActivity{
     private RadioGroup genderSign;
     private RadioButton genderSignOp;
     private AutoCompleteTextView citySign;
-    private EditText mEditInit;
-    int year_x, month_x, day_x;
-    static final int DILOG_ID=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +87,12 @@ public class SignUpActivity extends AppCompatActivity{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.send:
-                if(!firstNameSign.getText().toString().equals(null) && !lastNameSign.getText().toString().equals(null) && !birthdaySign.getText().toString().equals(null) && !phoneSign.getText().toString().equals(null) && !addressSign.getText().toString().equals(null) && !emailSign.getText().toString().equals(null) && !citySign.getText().toString().equals(null) && !genderSignOp.getText().toString().equals(null)){
+                if(firstNameSign.getText().equals(null) || lastNameSign.getText().equals(null) || birthdaySign.getText().equals(null) || phoneSign.getText().equals(null) || addressSign.getText().equals(null) || emailSign.getText().equals(null) || citySign.getText().equals(null) || genderSignOp.getText().equals(null))
+                {
+                    Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.warning2), Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+                else {
                     Intent toProfile = new Intent(getApplicationContext(), ProfileActivity.class);
                     toProfile.putExtra("KEY_FIRST_NAME", firstNameSign.getText().toString());
                     toProfile.putExtra("KEY_LAST_NAME", lastNameSign.getText().toString());
@@ -100,10 +103,6 @@ public class SignUpActivity extends AppCompatActivity{
                     toProfile.putExtra("KEY_EMAIL", emailSign.getText().toString());
                     toProfile.putExtra("KEY_CITY", citySign.getText().toString());
                     startActivity(toProfile);
-                }
-                else{
-                    Toast toast = Toast.makeText(getApplicationContext(),getString(R.string.warning2),Toast.LENGTH_SHORT);
-                    toast.show();
                 }
                 break;
 
