@@ -12,11 +12,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import gun0912.tedbottompicker.TedBottomPicker;
+
 public class UpdateProfileAcitivy extends AppCompatActivity{
         private EditText firstNameUpdate, lastNameUpdate, birthdayUpdate, phoneUpdate, addressUpdate, emailUpdate;
         private RadioGroup genderUpdate;
         private RadioButton genderUpdateOp;
         private AutoCompleteTextView cityUpdate;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +69,8 @@ public class UpdateProfileAcitivy extends AppCompatActivity{
                 DialogFragment newFragment = new DatePickerFragment(view);
                 newFragment.show(getSupportFragmentManager(), "datePicker");
                 break;
+
+            case R.id.button_update:
         }
     }
 

@@ -4,12 +4,14 @@ import android.Manifest;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -32,6 +34,7 @@ public class SignUpActivity extends AppCompatActivity{
     private RadioGroup genderSign;
     private RadioButton genderSignOp;
     private AutoCompleteTextView citySign;
+    private ImageView photo;
 
 
     @Override
@@ -48,6 +51,7 @@ public class SignUpActivity extends AppCompatActivity{
         citySign = (AutoCompleteTextView)findViewById(R.id.city);
         citySign.setAdapter(citiesArray);
         genderSign = (RadioGroup)findViewById(R.id.genderRadio);
+        photo=(ImageView)findViewById(R.id.photo);
         /*PermissionListener permissionlistener = new PermissionListener() {
             @Override
             public void onPermissionGranted() {
@@ -110,6 +114,18 @@ public class SignUpActivity extends AppCompatActivity{
                 DialogFragment newFragment = new DatePickerFragment(view);
                 newFragment.show(getSupportFragmentManager(), "datePicker");
                 break;
+
+            case R.id.button:
+                TedBottomPicker tedBottomPicker = new TedBottomPicker.Builder(getApplicationContext())
+                        .setOnImageSelectedListener(new TedBottomPicker.OnImageSelectedListener() {
+                            @Override
+                            public void onImageSelected(Uri uri) {
+                                photo.setImageURI(uri);
+                            }
+                        })
+                        .create();
+
+                tedBottomPicker.show(getSupportFragmentManager());
         }
     }
 }
