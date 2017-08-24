@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android=
+    "http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="co.edu.udea.compumovil.gr02_20172.lab1.ProfileActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/my_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_profile"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp" />
+
+    <ImageView
+        android:id="@+id/photo_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        android:tint="@color/MayaBlue"
+        android:layout_below="@+id/my_profile"
+        android:layout_marginLeft="25dp"  />
+
+    <TextView
+        android:id="@+id/first_name_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/first_name"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/photo_profile"
+        android:layout_marginLeft="25dp"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/first_name_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthday"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:layout_above="@+id/last_name_profile"
+        android:layout_alignLeft="@+id/my_profile"
+        android:layout_alignStart="@+id/my_profile" />
+
+    <TextView
+        android:id="@+id/last_name_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/last_name"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/first_name_profile"
+        android:layout_marginLeft="25dp"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/last_name_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthday"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:layout_above="@+id/gender_profile"
+        android:layout_alignLeft="@+id/my_profile"
+        android:layout_alignStart="@+id/my_profile" />
+
+    <TextView
+        android:id="@+id/gender_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/last_name_profile"
+        android:layout_marginLeft="25dp"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/gender_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthday"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:layout_above="@+id/birthday_profile"
+        android:layout_alignLeft="@+id/my_profile"
+        android:layout_alignStart="@+id/my_profile" />
+
+    <TextView
+        android:id="@+id/birthday_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthday"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/gender_profile"
+        android:layout_marginLeft="25dp"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/birthday_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthday"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:layout_above="@+id/phone_profile"
+        android:layout_alignLeft="@+id/my_profile"
+        android:layout_alignStart="@+id/my_profile" />
+
+    <TextView
+        android:id="@+id/phone_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/birthday_profile"
+        android:layout_marginLeft="25dp"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/phone_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthday"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:layout_above="@+id/address_profile"
+        android:layout_alignLeft="@+id/my_profile"
+        android:layout_alignStart="@+id/my_profile" />
+
+    <TextView
+        android:id="@+id/address_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/phone_profile"
+        android:layout_marginLeft="25dp"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/address_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthday"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:layout_above="@+id/email_profile"
+        android:layout_alignLeft="@+id/my_profile"
+        android:layout_alignStart="@+id/my_profile" />
+
+    <TextView
+        android:id="@+id/email_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/address_profile"
+        android:layout_marginLeft="25dp"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/email_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthday"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:layout_above="@+id/city_profile"
+        android:layout_alignLeft="@+id/my_profile"
+        android:layout_alignStart="@+id/my_profile"/>
+
+    <TextView
+        android:id="@+id/city_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/email_profile"
+        android:layout_marginLeft="25dp"
+        tools:ignore="RtlHardcoded" />
+    <TextView
+        android:id="@+id/city_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthday"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/email_info"
+        android:layout_alignStart="@+id/email_info" />
+
+</RelativeLayout>
+</ScrollView>

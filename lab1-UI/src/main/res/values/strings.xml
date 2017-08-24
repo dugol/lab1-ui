@@ -37,6 +37,9 @@
     <string name="update">Actualizar perfil</string>
     <string name="exit">Salir</string>
     <string name="warning">Los datos ingresados son incorrectos</string>
+    <string name="my_profile">Mi perfil</string>
+    <string name="gender">Género</string>
+
 
     <string name="title_activity_apartment">ApartmentActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>

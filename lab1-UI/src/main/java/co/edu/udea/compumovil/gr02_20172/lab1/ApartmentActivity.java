@@ -1,5 +1,6 @@
 package co.edu.udea.compumovil.gr02_20172.lab1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -80,9 +81,13 @@ public class ApartmentActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.update) {
-            // Handle the camera action
-        } else if (id == R.id.exit) {
+        if (id == R.id.profile_item) {
+            Intent toProfile = new Intent(getApplicationContext(),ProfileActivity.class);
+            startActivity(toProfile);
+        } else if (id == R.id.update_item) {
+
+        }
+        else if (id == R.id.exit_item){
 
         }
 

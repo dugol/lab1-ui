@@ -4,12 +4,16 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/update"
-            android:icon="@drawable/ic_menu_manage"
+            android:id="@+id/profile_item"
+            android:icon="@drawable/ic_account_circle_black_48dp"
+            android:title="@string/my_profile" />
+        <item
+            android:id="@+id/update_item"
+            android:icon="@drawable/ic_edit_black_48dp"
             android:title="@string/update" />
         <item
-            android:id="@+id/exit"
-            android:icon="@drawable/ic_menu_send"
+            android:id="@+id/exit_item"
+            android:icon="@drawable/ic_exit_to_app_black_48dp"
             android:title="@string/exit" />
     </group>
 

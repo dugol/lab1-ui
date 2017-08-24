@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_height="fill_parent"
-    android:layout_width="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="co.edu.udea.compumovil.gr02_20172.lab1.SignUpActivity">
-
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="co.edu.udea.compumovil.gr02_20172.lab1.UpdateProfileAcitivy">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/title_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sign_up_register"
+        android:text="@string/update"
         android:textSize="35dp"
         android:textStyle="bold"
         android:textColor="@color/colorBlack"
@@ -24,48 +22,48 @@
         android:layout_marginTop="13dp" />
 
     <ImageView
-        android:id="@+id/photo"
+        android:id="@+id/photo_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         app:srcCompat="@android:drawable/ic_menu_gallery"
         android:tint="@color/MayaBlue"
-        android:layout_below="@+id/title"
+        android:layout_below="@+id/title_update"
         android:layout_marginLeft="25dp"  />
 
     <ImageButton
-        android:id="@+id/button"
+        android:id="@+id/button_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
         app:srcCompat="@android:drawable/ic_menu_camera"
         android:textColor="@color/White"
         android:backgroundTint="@color/SummerSky"
-        android:layout_above="@+id/first_name"
-        android:layout_alignRight="@+id/genderRadio"
-        android:layout_alignEnd="@+id/genderRadio" />
+        android:layout_above="@+id/first_name_update"
+        android:layout_alignRight="@+id/genderRadio_update"
+        android:layout_alignEnd="@+id/genderRadio_update" />
 
     <EditText
-        android:id="@+id/last_name"
+        android:id="@+id/last_name_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
         android:ems="10"
         android:inputType="textCapWords|textNoSuggestions"
         android:hint="@string/last_name"
-        android:layout_below="@+id/first_name"
+        android:layout_below="@+id/first_name_update"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="120dp" />
 
     <EditText
-        android:id="@+id/first_name"
+        android:id="@+id/first_name_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
         android:ems="10"
         android:inputType="textCapWords|textNoSuggestions"
         android:hint="@string/first_name"
-        android:layout_below="@+id/photo"
+        android:layout_below="@+id/photo_update"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="120dp"/>
 
@@ -74,9 +72,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="25dp"
-        android:layout_below="@id/last_name"
+        android:layout_below="@id/last_name_update"
         android:orientation="horizontal"
-        android:id="@+id/genderRadio">
+        android:id="@+id/genderRadio_update">
 
         <RadioButton
             android:id="@+id/radio_men"
@@ -92,73 +90,73 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/birthday"
+        android:id="@+id/birthday_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/birthday"
         android:layout_marginTop="30dp"
         android:textSize="18dp"
         android:textColor="@color/colorBlack"
-        android:layout_below="@+id/genderRadio"
+        android:layout_below="@+id/genderRadio_update"
         android:layout_marginLeft="25dp"/>
 
-   <!-- <DatePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></DatePicker>-->
+    <!-- <DatePicker
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"></DatePicker>-->
 
     <EditText
-        android:id="@+id/phone"
+        android:id="@+id/phone_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
         android:ems="10"
         android:inputType="phone"
         android:hint="@string/phone"
-        android:layout_below="@+id/birthday"
+        android:layout_below="@+id/birthday_update"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="120dp"/>
 
     <EditText
-        android:id="@+id/address"
+        android:id="@+id/address_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
         android:ems="10"
         android:inputType="textNoSuggestions"
         android:hint="@string/address"
-        android:layout_below="@+id/phone"
+        android:layout_below="@+id/phone_update"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="120dp"/>
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/email_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:hint="@string/email"
-        android:layout_below="@+id/address"
+        android:layout_below="@+id/address_update"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="120dp"/>
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/password_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
         android:ems="10"
         android:inputType="textPassword"
         android:hint="@string/password"
-        android:layout_below="@+id/email"
+        android:layout_below="@+id/email_update"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="120dp"/>
 
     <AutoCompleteTextView
-        android:id="@+id/city"
+        android:id="@+id/city_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password"
+        android:layout_below="@+id/password_update"
         android:layout_marginTop="23dp"
         android:ems="10"
         android:hint="@string/city"
@@ -174,10 +172,8 @@
         android:textColor="@color/White"
         android:backgroundTint="@color/SummerSky"
         android:layout_marginTop="23dp"
-        android:layout_below="@id/city"
+        android:layout_below="@id/city_update"
         android:layout_centerHorizontal="true" />
 
-
 </RelativeLayout>
-
 </ScrollView>

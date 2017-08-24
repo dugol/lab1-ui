@@ -38,4 +38,6 @@
     <string name="update">Update profile</string>
     <string name="exit">Exit</string>
     <string name="warning">The data is incorrect</string>
+    <string name="my_profile">My profile</string>
+    <string name="gender">Gender</string>
 </resources>
