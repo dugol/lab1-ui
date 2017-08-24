@@ -37,4 +37,5 @@
     <string name="ted_permission">If you reject permission, you can not use this service. Please turn on permission</string>
     <string name="update">Update profile</string>
     <string name="exit">Exit</string>
+    <string name="warning">The data is incorrect</string>
 </resources>

@@ -6,6 +6,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
 import com.gun0912.tedpermission.PermissionListener;
@@ -15,16 +17,26 @@ import java.util.ArrayList;
 
 import gun0912.tedbottompicker.TedBottomPicker;
 
+import static co.edu.udea.compumovil.gr02_20172.lab1.R.array.cities;
+
 /**
  * Created by user on 22/08/2017.
  */
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
+    private AutoCompleteTextView cityAutoComplete;
+    private
+    int year_x, month_x, day_x;
+    static final int DILOG_ID=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up_view);
-        PermissionListener permissionlistener = new PermissionListener() {
+        ArrayAdapter<String> citiesArray = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.cities));
+        cityAutoComplete = (AutoCompleteTextView)findViewById(R.id.city);
+        cityAutoComplete.setAdapter(citiesArray);
+        /*PermissionListener permissionlistener = new PermissionListener() {
             @Override
             public void onPermissionGranted() {
                 Toast.makeText(SignUpActivity.this, "Permission Granted", Toast.LENGTH_SHORT).show();
@@ -50,7 +62,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     }
                 })
                 .create();
-        tedBottomPicker.show(getSupportFragmentManager());
+        tedBottomPicker.show(getSupportFragmentManager());*/
+    }
+
+    public void showDialog()
+    {
+
     }
 
     @Override
