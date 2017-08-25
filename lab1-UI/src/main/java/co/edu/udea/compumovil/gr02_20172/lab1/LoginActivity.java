@@ -45,6 +45,7 @@ public class LoginActivity extends AppCompatActivity{
                     toApartment.putExtra("KEY_PASSWORD","admin");
                     toApartment.putExtra("KEY_CITY","Medellín");
                     startActivity(toApartment);
+                    finish();
                 }
                 else
                 {

@@ -41,4 +41,7 @@
     <string name="my_profile">My profile</string>
     <string name="gender">Gender</string>
     <string name="warning2">You can not leave information empty</string>
+    <string name="from_cam">Cam</string>
+    <string name="from_sd">SD Card</string>
+    <string name="title_image">select image</string>
 </resources>

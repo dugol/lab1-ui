@@ -118,8 +118,10 @@ public class ApartmentActivity extends AppCompatActivity
             startActivity(toUpdate);
         }
         else if (id == R.id.exit_item){
-            Intent toLogin = new Intent(getApplicationContext(),LoginActivity.class);
-            startActivity(toLogin);
+            Intent outApp = new Intent(Intent.ACTION_MAIN);
+            outApp.addCategory(Intent.CATEGORY_HOME);
+            outApp.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(outApp);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.menu_drawer_layout);

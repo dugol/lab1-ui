@@ -1,17 +1,26 @@
 package co.edu.udea.compumovil.gr02_20172.lab1;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.design.widget.BottomSheetBehavior;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.os.EnvironmentCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -20,6 +29,7 @@ import android.widget.Toast;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import gun0912.tedbottompicker.TedBottomPicker;
@@ -35,7 +45,8 @@ public class SignUpActivity extends AppCompatActivity{
     private RadioGroup genderSign;
     private RadioButton genderSignOp;
     private AutoCompleteTextView citySign;
-    private ImageView photo;
+
+
 
 
     @Override
@@ -53,35 +64,9 @@ public class SignUpActivity extends AppCompatActivity{
         citySign = (AutoCompleteTextView)findViewById(R.id.city);
         citySign.setAdapter(citiesArray);
         genderSign = (RadioGroup)findViewById(R.id.genderRadio);
-        photo=(ImageView)findViewById(R.id.photo);
-        /*PermissionListener permissionlistener = new PermissionListener() {
-            @Override
-            public void onPermissionGranted() {
-                Toast.makeText(SignUpActivity.this, "Permission Granted", Toast.LENGTH_SHORT).show();
-            }
 
-            @Override
-            public void onPermissionDenied(ArrayList<String> deniedPermissions) {
-                Toast.makeText(SignUpActivity.this, "Permission Denied\n" + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
-            }
-
-
-        };
-        TedPermission.with(this)
-                .setPermissionListener(permissionlistener)
-                .setDeniedMessage(R.string.address)
-                .setPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                .check();
-        TedBottomPicker tedBottomPicker = new TedBottomPicker.Builder(SignUpActivity.this)
-                .setOnImageSelectedListener(new TedBottomPicker.OnImageSelectedListener() {
-                    @Override
-                    public void onImageSelected(Uri uri) {
-                        // here is selected uri
-                    }
-                })
-                .create();
-        tedBottomPicker.show(getSupportFragmentManager());*/
     }
+
 
     public void rbclick(View v)
     {
@@ -89,7 +74,7 @@ public class SignUpActivity extends AppCompatActivity{
         genderSignOp = (RadioButton)findViewById(genderSignId);
     }
 
-//firstNameSign, lastNameSign, birthdaySign, phoneSign, addressSign, emailSign
+
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.send:
@@ -110,6 +95,7 @@ public class SignUpActivity extends AppCompatActivity{
                     toApartment.putExtra("KEY_PASSWORD",passwordSign.getText());
                     toApartment.putExtra("KEY_CITY", citySign.getText().toString());
                     startActivity(toApartment);
+                    finish();
                 }
                 break;
 
@@ -118,17 +104,6 @@ public class SignUpActivity extends AppCompatActivity{
                 newFragment.show(getSupportFragmentManager(), "datePicker");
                 break;
 
-            case R.id.button:
-                TedBottomPicker tedBottomPicker = new TedBottomPicker.Builder(getApplicationContext())
-                        .setOnImageSelectedListener(new TedBottomPicker.OnImageSelectedListener() {
-                            @Override
-                            public void onImageSelected(Uri uri) {
-                                photo.setImageURI(uri);
-                            }
-                        })
-                        .create();
-
-                tedBottomPicker.show(getSupportFragmentManager());
         }
     }
 }

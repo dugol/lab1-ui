@@ -199,7 +199,7 @@
         android:backgroundTint="@color/SummerSky"
         android:layout_marginTop="23dp"
         android:layout_below="@id/city_update"
-        android:layout_centerHorizontal="true" />
-
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"/>
 </RelativeLayout>
 </ScrollView>

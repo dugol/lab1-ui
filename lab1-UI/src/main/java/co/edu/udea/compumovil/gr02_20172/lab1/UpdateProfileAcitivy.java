@@ -12,14 +12,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import gun0912.tedbottompicker.TedBottomPicker;
-
 public class UpdateProfileAcitivy extends AppCompatActivity{
-        private EditText firstNameUpdate, lastNameUpdate, birthdayUpdate, phoneUpdate, addressUpdate, emailUpdate;
+        private EditText firstNameUpdate, lastNameUpdate, birthdayUpdate, phoneUpdate, addressUpdate, emailUpdate,passwordUpdate;
         private RadioGroup genderUpdate;
         private RadioButton genderUpdateOp;
         private AutoCompleteTextView cityUpdate;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,18 +28,31 @@ public class UpdateProfileAcitivy extends AppCompatActivity{
         phoneUpdate = (EditText)findViewById(R.id.phone_update);
         addressUpdate = (EditText)findViewById(R.id.address_update);
         emailUpdate = (EditText)findViewById(R.id.email_update);
+        passwordUpdate = (EditText)findViewById(R.id.password_update);
         ArrayAdapter<String> citiesArray = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.cities));
         cityUpdate = (AutoCompleteTextView)findViewById(R.id.city_update);
         cityUpdate.setAdapter(citiesArray);
         genderUpdate = (RadioGroup)findViewById(R.id.genderRadio_update);
         firstNameUpdate.setText(getIntent().getStringExtra("KEY_FIRST_NAME"));
         lastNameUpdate.setText(getIntent().getStringExtra("KEY_LAST_NAME"));
+        if(getIntent().getStringExtra("KEY_GENDER").equals(getString(R.string.female)))
+        {
+            genderUpdateOp = (RadioButton)findViewById(R.id.radio_women);
+            genderUpdateOp.setChecked(true);
+        }
+        else
+        {
+            genderUpdateOp = (RadioButton)findViewById(R.id.radio_men);
+            genderUpdateOp.setChecked(true);
+        }
         birthdayUpdate.setText(getIntent().getStringExtra("KEY_BIRTHDAY"));
         phoneUpdate.setText(getIntent().getStringExtra("KEY_PHONE"));
         addressUpdate.setText(getIntent().getStringExtra("KEY_ADDRESS"));
+        passwordUpdate.setText(getIntent().getStringExtra("KEY_PASSWORD"));
         emailUpdate.setText(getIntent().getStringExtra("KEY_EMAIL"));
         cityUpdate.setText(getIntent().getStringExtra("KEY_CITY"));
     }
+
 
     public void rbclick(View v)
     {
@@ -59,16 +69,17 @@ public class UpdateProfileAcitivy extends AppCompatActivity{
                     toast.show();
                 }
                 else {
-                    Intent toProfile = new Intent(getApplicationContext(), ProfileActivity.class);
-                    toProfile.putExtra("KEY_FIRST_NAME", firstNameUpdate.getText().toString());
-                    toProfile.putExtra("KEY_LAST_NAME", lastNameUpdate.getText().toString());
-                    toProfile.putExtra("KEY_GENDER", genderUpdateOp.getText().toString());
-                    toProfile.putExtra("KEY_BIRTHDAY", birthdayUpdate.getText().toString());
-                    toProfile.putExtra("KEY_PHONE", phoneUpdate.getText().toString());
-                    toProfile.putExtra("KEY_ADDRESS", addressUpdate.getText().toString());
-                    toProfile.putExtra("KEY_EMAIL", emailUpdate.getText().toString());
-                    toProfile.putExtra("KEY_CITY", cityUpdate.getText().toString());
-                    startActivity(toProfile);
+                    Intent toApartment = new Intent(getApplicationContext(), ApartmentActivity.class);
+                    toApartment.putExtra("KEY_FIRST_NAME", firstNameUpdate.getText().toString());
+                    toApartment.putExtra("KEY_LAST_NAME", lastNameUpdate.getText().toString());
+                    toApartment.putExtra("KEY_GENDER", genderUpdateOp.getText().toString());
+                    toApartment.putExtra("KEY_BIRTHDAY", birthdayUpdate.getText().toString());
+                    toApartment.putExtra("KEY_PHONE", phoneUpdate.getText().toString());
+                    toApartment.putExtra("KEY_ADDRESS", addressUpdate.getText().toString());
+                    toApartment.putExtra("KEY_EMAIL", emailUpdate.getText().toString());
+                    toApartment.putExtra("KEY_PASSWORD",passwordUpdate.getText().toString());
+                    toApartment.putExtra("KEY_CITY", cityUpdate.getText().toString());
+                    startActivity(toApartment);
                 }
                 break;
 
@@ -76,8 +87,6 @@ public class UpdateProfileAcitivy extends AppCompatActivity{
                 DialogFragment newFragment = new DatePickerFragment(view);
                 newFragment.show(getSupportFragmentManager(), "datePicker");
                 break;
-
-            case R.id.button_update:
         }
     }
 
