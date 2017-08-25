@@ -63,7 +63,7 @@ public class UpdateProfileAcitivy extends AppCompatActivity{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.send_update:
-                if(firstNameUpdate.getText().equals(null) || lastNameUpdate.getText().equals(null) || birthdayUpdate.getText().equals(null) || phoneUpdate.getText().equals(null) || addressUpdate.getText().equals(null) || emailUpdate.getText().equals(null) || cityUpdate.getText().equals(null) || genderUpdateOp.getText().equals(null))
+                if(firstNameUpdate.getText().equals(null) || lastNameUpdate.getText().equals(null) || birthdayUpdate.getText().equals(null) || phoneUpdate.getText().equals(null) || addressUpdate.getText().equals(null) || emailUpdate.getText().equals(null) || cityUpdate.getText().equals(null))
                 {
                     Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.warning2), Toast.LENGTH_SHORT);
                     toast.show();

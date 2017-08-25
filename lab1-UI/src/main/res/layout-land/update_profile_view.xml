@@ -191,7 +191,7 @@
         android:layout_toEndOf="@+id/send" />
 
     <Button
-        android:id="@+id/send"
+        android:id="@+id/send_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/send"
